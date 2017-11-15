@@ -50,10 +50,10 @@ ${voffset -5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}RAM $color$mem 
 ${memgraph 30,0 FFA300 543500}
 ${voffset 5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}RAM Process
 ${voffset -5}$hr
-${font Ubuntu Condensed:pixelsize=15}${color FFA300}${top_mem name 1} ${color}${alignr}${top_mem mem_res 1}%
-${color FFA300}${top_mem name 2} ${color}${alignr}${top_mem mem_res 2}%
-${color FFA300}${top_mem name 3} ${color}${alignr}${top_mem mem_res 3}%
-${color FFA300}${top_mem name 4} ${color}${alignr}${top_mem mem_res 4}%
+${font Ubuntu Condensed:pixelsize=15}${color FFA300}${top_mem name 1} ${color}${alignr}${top_mem mem_res 1}
+${color FFA300}${top_mem name 2} ${color}${alignr}${top_mem mem_res 2}
+${color FFA300}${top_mem name 3} ${color}${alignr}${top_mem mem_res 3}
+${color FFA300}${top_mem name 4} ${color}${alignr}${top_mem mem_res 4}
 
 # CPU
 ${font Ubuntu Condensed:pixelsize=20}${color FFA300}CPU
