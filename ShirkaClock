@@ -26,7 +26,7 @@ alignment top_middle
 gap_x 0
 gap_y 0
 no_buffers yes
-uppercase yes
+uppercase no
 cpu_avg_samples 2
 net_avg_samples 1
 override_utf8_locale yes
