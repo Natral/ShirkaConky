@@ -47,7 +47,7 @@ ${fs_bar 5,0 /media/TeraTron}
 ${font Ubuntu Condensed:pixelsize=20}${color FFA300}Memory
 ${voffset -5}$hr
 ${voffset -5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}RAM $color$mem / $memmax ${alignr}${color FFA300}USED $color${memperc}%
-${memgraph 30,0 FFA300 543500}
+${memgraph 40,0 FFA300 543500}
 ${voffset 5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}RAM Process
 ${voffset -5}$hr
 ${font Ubuntu Condensed:pixelsize=15}${color FFA300}${top_mem name 1} ${color}${alignr}${top_mem mem_res 1}
@@ -59,9 +59,9 @@ ${color FFA300}${top_mem name 4} ${color}${alignr}${top_mem mem_res 4}
 ${font Ubuntu Condensed:pixelsize=20}${color FFA300}CPU
 ${voffset -5}$hr
 ${voffset -5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}CPU1 $color${cpu cpu1}% ${color FFA300}${alignr}TEMP $color${exec sensors|grep 'Core 0'|awk '{print $3}'}
-${cpugraph cpu1 30,0 FFA300 543500}
+${cpugraph cpu1 40,0 FFA300 543500}
 ${voffset 5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}CPU2 $color${cpu cpu2}% ${color FFA300}${alignr}TEMP $color${exec sensors|grep 'Core 1'|awk '{print $3}'}
-${cpugraph cpu2 30,0 FFA300 543500}
+${cpugraph cpu2 40,0 FFA300 543500}
 ${voffset 5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}CPU Process
 ${voffset -5}$hr
 ${font Ubuntu Condensed:pixelsize=15}${color FFA300}${top name 1} ${color}${alignr}${top cpu 1}%
@@ -73,9 +73,9 @@ ${color FFA300}${top name 4} ${color}${alignr}${top cpu 4}%
 ${font Ubuntu Condensed:pixelsize=20}${color FFA300}Network
 ${voffset -5}$hr
 ${voffset -5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}DOWN $color${downspeedf enp1s0} KiB/s ${alignr}${color FFA300} TOTAL DOWN $color${totaldown enp1s0}
-${downspeedgraph enp1s0 30,0 FFA300 543500}
+${downspeedgraph enp1s0 40,0 FFA300 543500}
 ${voffset -5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}UP $color${upspeedf enp1s0} KiB/s ${alignr}${color FFA300} TOTAL UP $color${totalup enp1s0}
-${upspeedgraph enp1s0 30,0 FFA300 543500}
+${upspeedgraph enp1s0 40,0 FFA300 543500}
 
 # Battery
 ${font Ubuntu Condensed:pixelsize=20}${color FFA300}Battery
