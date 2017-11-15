@@ -1,0 +1,84 @@
+use_xft yes
+xftfont 123:size=8
+xftalpha 0.1
+update_interval 1
+total_run_times 0
+
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_colour 000000
+own_window_argb_visual yes
+own_window_argb_value 0
+
+double_buffer yes
+minimum_size 350 0
+maximum_width 350
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color E6E6E6
+default_shade_color red
+default_outline_color green
+alignment top_right
+gap_x 50
+gap_y 50
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 1
+override_utf8_locale yes
+use_spacer yes
+
+TEXT
+# File System
+${font Ubuntu Condensed:pixelsize=20}${color FFA300}File System
+${voffset -5}$hr
+${voffset -5}${font Ubuntu Condensed:pixelsize=15}${voffset 5}${color FFA300}ROOT $color${fs_free /} / ${fs_size /} ${alignr}${color FFA300}USED $color${fs_used_perc /}%
+${fs_bar 5,0 /}
+${voffset 5}${color FFA300}HOME $color${fs_free /home} / ${fs_size /home} ${alignr}${color FFA300}USED $color${fs_used_perc /home}%
+${fs_bar 5,0 /home}
+${voffset 5}${color FFA300}DATA $color${fs_free /media/TeraTron} / ${fs_size /media/TeraTron} ${alignr}${color FFA300}USED $color${fs_used_perc /media/TeraTron}%
+${fs_bar 5,0 /media/TeraTron}
+
+# Memory
+${font Ubuntu Condensed:pixelsize=20}${color FFA300}Memory
+${voffset -5}$hr
+${voffset -5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}RAM $color$mem / $memmax ${alignr}${color FFA300}USED $color${memperc}%
+${memgraph 30,0 FFA300 543500}
+${voffset 5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}RAM Process
+${voffset -5}$hr
+${font Ubuntu Condensed:pixelsize=15}${color FFA300}${top_mem name 1} ${color}${alignr}${top_mem mem_res 1}%
+${color FFA300}${top_mem name 2} ${color}${alignr}${top_mem mem_res 2}%
+${color FFA300}${top_mem name 3} ${color}${alignr}${top_mem mem_res 3}%
+${color FFA300}${top_mem name 4} ${color}${alignr}${top_mem mem_res 4}%
+
+# CPU
+${font Ubuntu Condensed:pixelsize=20}${color FFA300}CPU
+${voffset -5}$hr
+${voffset -5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}CPU1 $color${cpu cpu1}% ${color FFA300}${alignr}TEMP $color${exec sensors|grep 'Core 0'|awk '{print $3}'}
+${cpugraph cpu1 30,0 FFA300 543500}
+${voffset 5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}CPU2 $color${cpu cpu2}% ${color FFA300}${alignr}TEMP $color${exec sensors|grep 'Core 1'|awk '{print $3}'}
+${cpugraph cpu2 30,0 FFA300 543500}
+${voffset 5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}CPU Process
+${voffset -5}$hr
+${font Ubuntu Condensed:pixelsize=15}${color FFA300}${top name 1} ${color}${alignr}${top cpu 1}%
+${color FFA300}${top name 2} ${color}${alignr}${top cpu 2}%
+${color FFA300}${top name 3} ${color}${alignr}${top cpu 3}%
+${color FFA300}${top name 4} ${color}${alignr}${top cpu 4}%
+
+# Network
+${font Ubuntu Condensed:pixelsize=20}${color FFA300}Network
+${voffset -5}$hr
+${voffset -5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}DOWN $color${downspeedf enp1s0} KiB/s ${alignr}${color FFA300} TOTAL DOWN $color${totaldown enp1s0}
+${downspeedgraph enp1s0 30,0 FFA300 543500}
+${voffset -5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}UP $color${upspeedf enp1s0} KiB/s ${alignr}${color FFA300} TOTAL UP $color${totalup enp1s0}
+${upspeedgraph enp1s0 30,0 FFA300 543500}
+
+# Battery
+${font Ubuntu Condensed:pixelsize=20}${color FFA300}Battery
+${voffset -5}$hr
+${voffset -5}${font Ubuntu Condensed:pixelsize=15}${color FFA300}TIME $color${battery_time BAT1} ${alignr}${color FFA300} CHARGED $color${battery_percent BAT1}%
+${battery_bar BAT1}
