@@ -13,6 +13,7 @@ killall conky
 sleep 2s
 cd "/home/rogertm/Projects/ShirkaConky" &
 conky -c "/home/rogertm/Projects/ShirkaConky/ShirkaClock" &
+sleep 1s
 cd "/home/rogertm/Projects/ShirkaConky"
 conky -c "/home/rogertm/Projects/ShirkaConky/ShirkaSystem" &
 cd "/home/rogertm/Projects/ShirkaConky"
