@@ -34,4 +34,4 @@ use_spacer yes
 
 TEXT
 # Knocking
-${font Ubuntu Condensed:pixelsize=25}$color${alignc}Knock, knock, knock ${exec whoami}. The Matrix has you!
+${font Ubuntu Condensed:pixelsize=25}$color${alignc}Wake up ${exec whoami}. The Matrix has you!
